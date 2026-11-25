@@ -1,9 +1,10 @@
-from flask import flask
-import os
-app=Flask(__name__)
+from flask import Flask
+
+app = Flask(__name__)
+
 @app.route("/")
 def home():
-  version = os.getenv("APP VERSION","v1.0")
-  return f"<h1>Hello students!Running Conatiner Build:{version}</h1>"
-  if__name__=="__main__":
-    app.run(host="0.0.0.0",port=5000)
+    return "Hello Students! Python Docker Container executed successfully!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
